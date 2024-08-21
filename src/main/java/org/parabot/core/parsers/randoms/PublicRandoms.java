@@ -1,18 +1,18 @@
 package org.parabot.core.parsers.randoms;
 
+import org.parabot.api.io.WebUtil;
+import org.parabot.core.Configuration;
+import org.parabot.core.Context;
+import org.parabot.core.Core;
+import org.parabot.core.Directories;
+import org.parabot.core.io.NoProgressListener;
+
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
-import org.parabot.api.io.WebUtil;
-import org.parabot.api.output.Logger;
-import org.parabot.core.Configuration;
-import org.parabot.core.Context;
-import org.parabot.core.Core;
-import org.parabot.core.Directories;
-import org.parabot.core.io.NoProgressListener;
 
 /**
  * @author JKetelaar

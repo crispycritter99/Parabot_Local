@@ -1,6 +1,6 @@
 package org.parabot.core.ui.components.notifications;
 
-import org.parabot.api.Configuration;
+import org.parabot.Configuration;
 import org.parabot.api.output.Verboser;
 import org.parabot.api.ui.JavaFxUtil;
 
@@ -8,7 +8,6 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
-import java.net.URL;
 
 /**
  * A JavaFX Panel embedded into a Swing JFrame - handles notification settings

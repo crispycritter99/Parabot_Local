@@ -58,19 +58,17 @@ public class VerboseLoader extends JPanel implements ProgressListener {
         setSize(775, 510);
         setPreferredSize(new Dimension(775, 510));
         setDoubleBuffered(true);
-        setOpaque(false);
 
-        if (username != null && password != null) {
-            if (Core.inDebugMode() || manager.login(username, password, false)) {
-                currentState = STATE_SERVER_SELECT;
-            }
-        }
+        // ServerSelector.getInstance();
+
+        currentState = STATE_SERVER_SELECT;
 
         if (currentState == STATE_AUTHENTICATION) {
             addLoginPanel();
         } else if (currentState == STATE_SERVER_SELECT) {
             addServerPanel();
         }
+
     }
 
     /**
@@ -196,11 +194,9 @@ public class VerboseLoader extends JPanel implements ProgressListener {
 
     public void switchState(int state) {
         removeAll();
-        if (state == STATE_AUTHENTICATION) {
-            addLoginPanel();
-        } else if (state == STATE_SERVER_SELECT) {
+
             addServerPanel();
-        }
+
         this.currentState = state;
         revalidate();
     }

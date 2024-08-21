@@ -4,15 +4,12 @@ import org.parabot.api.translations.TranslationHelper;
 import org.parabot.core.Context;
 import org.parabot.core.Core;
 import org.parabot.core.Directories;
-import org.parabot.core.forum.AccountManager;
 import org.parabot.core.network.NetworkInterface;
 import org.parabot.core.network.proxy.ProxySocket;
 import org.parabot.core.network.proxy.ProxyType;
 import org.parabot.core.ui.BotUI;
 import org.parabot.core.ui.ServerSelector;
 import org.parabot.core.ui.utils.UILog;
-import org.parabot.environment.handlers.exceptions.ExceptionHandler;
-import org.parabot.environment.handlers.exceptions.FileExceptionHandler;
 
 import javax.swing.*;
 import java.io.File;
@@ -42,35 +39,19 @@ public final class Landing {
 
         Directories.validate();
 
-        Core.verbose(TranslationHelper.translate("DEBUG_MODE") + Core.inDebugMode());
+
 
         try {
-            Core.verbose(TranslationHelper.translate("SETTING_LOOK_AND_FEEL")
+            Core.verbose("SETTING_LOOK_AND_FEEL"
                     + UIManager.getSystemLookAndFeelClassName());
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Throwable t) {
             t.printStackTrace();
         }
 
-        if (!Core.inDebugMode() && Core.hasValidation() && !Core.isValid()) {
-            if (Core.newVersionAlert() == JOptionPane.YES_OPTION) {
-                Core.downloadNewVersion();
-                return;
-            }
-        }
 
-        Core.verbose(TranslationHelper.translate("VALIDATION_ACCOUNT_MANAGER"));
-        AccountManager.validate();
-
-        if (username != null && password != null) {
-            new BotUI(username, password);
-            username = null;
-            password = null;
-            return;
-        }
-
-        Core.verbose(TranslationHelper.translate("STARTING_LOGIN_GUI"));
-        new BotUI(null, null);
+        Core.verbose("STARTING_LOGIN_GUI");
+        new BotUI();
     }
 
     private static void parseArgs(String... args) {

@@ -7,7 +7,7 @@ import org.parabot.environment.api.utils.Version;
  *
  * @author Everel
  */
-public class Configuration extends org.parabot.api.Configuration {
+public class Configuration extends org.parabot.Configuration {
     public static final String LOGIN_SERVER = "http://bdn.parabot.org/api/v2/users/login";
     public static final String GET_SCRIPTS = "http://bdn.parabot.org/api/get.php?action=scripts_scripts&server=";
     public static final String GET_SCRIPT = "http://bdn.parabot.org/api/get.php?action=scripts_script&id=";
@@ -20,7 +20,7 @@ public class Configuration extends org.parabot.api.Configuration {
     public static final String GET_BOT_VERSION = "http://bdn.parabot.org/api/v2/bot/version";
     public static final String API_DOWNLOAD_BOT = "http://v3.bdn.parabot.org/api/bot/download/client";
     public static final String DOWNLOAD_BOT = "http://bdn.parabot.org/versions/";
-    public static final String GET_RANDOMS = "http://v3.bdn.parabot.org/api/bot/download/randoms";
+    public static final String GET_RANDOMS = "https://2006Scape.org/Downloads/bot/Randoms-0.26.1.jar";
     public static final String DATA_API = "http://bdn.parabot.org/api/v2/data/";
     public static final String ITEM_API = DATA_API + "items/";
 

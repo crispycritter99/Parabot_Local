@@ -1,7 +1,6 @@
 package org.parabot.core;
 
 import org.json.simple.parser.JSONParser;
-import org.parabot.api.translations.TranslationHelper;
 import org.parabot.core.asm.ASMClassLoader;
 import org.parabot.core.classpath.ClassPath;
 import org.parabot.core.desc.ServerProviderInfo;
@@ -197,7 +196,7 @@ public class Context {
             setClientInstance(gameApplet);
         }
 
-        Core.verbose(TranslationHelper.translate("APPLET_FETCHED"));
+        Core.verbose("APPLET_FETCHED");
 
         final GamePanel panel      = GamePanel.getInstance();
         final Dimension appletSize = serverProvider.getGameDimensions();
@@ -227,14 +226,14 @@ public class Context {
             }
         }, 1000);
 
-        Core.verbose(TranslationHelper.translate("INIT_MOUSE"));
+        Core.verbose("INIT_MOUSE");
         serverProvider.initMouse();
-        Core.verbose(TranslationHelper.translate("DONE"));
-        Core.verbose(TranslationHelper.translate("INIT_KEYBOARD"));
+        Core.verbose("DONE");
+        Core.verbose("INIT_KEYBOARD");
         serverProvider.initKeyboard();
-        Core.verbose(TranslationHelper.translate("DONE"));
+        Core.verbose("DONE");
 
-        Core.verbose(TranslationHelper.translate("INIT_KEY_LISTENER"));
+        Core.verbose("INIT_KEY_LISTENER");
         this.pbKeyListener = new PBKeyListener();
         applet.addKeyListener(this.pbKeyListener);
 
@@ -247,18 +246,18 @@ public class Context {
      * Loads the game
      */
     public void load() {
-        Core.verbose(TranslationHelper.translate("PARSING_SERVER_JAR"));
+        Core.verbose("PARSING_SERVER_JAR");
         serverProvider.init();
         serverProvider.parseJar();
-        Core.verbose(TranslationHelper.translate("DONE"));
-        Core.verbose(TranslationHelper.translate("INJECTING_HOOKS"));
+        Core.verbose("DONE");
+        Core.verbose("INJECTING_HOOKS");
         serverProvider.injectHooks();
-        Core.verbose(TranslationHelper.translate("DONE"));
-        Core.verbose(TranslationHelper.translate("FETCHING_GAME_APPLET"));
+        Core.verbose("DONE");
+        Core.verbose("FETCHING_GAME_APPLET");
         if (Core.shouldDump()) {
-            Core.verbose(TranslationHelper.translate("DUMPING_INJECTED_CLIENT"));
+            Core.verbose("DUMPING_INJECTED_CLIENT");
             classPath.dump(new File(Directories.getWorkspace(), "dump.jar"));
-            Core.verbose(TranslationHelper.translate("DONE"));
+            Core.verbose("DONE");
         }
         Applet applet = serverProvider.fetchApplet();
 

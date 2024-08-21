@@ -80,7 +80,7 @@ public class ServerProviderInfo {
             JSONObject     settings = (JSONObject) WebUtil.getJsonParser().parse(br);
             parseSettings(settings);
         } catch (ParseException | IOException e) {
-            e.printStackTrace();
+//e.printStackTrace();
         }
 
         this.properties.setProperty("client_jar", clientJar);

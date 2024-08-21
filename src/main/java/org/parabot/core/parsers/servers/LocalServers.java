@@ -1,10 +1,5 @@
 package org.parabot.core.parsers.servers;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.lang.reflect.Constructor;
-import java.util.ArrayList;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.parabot.core.Configuration;
@@ -18,6 +13,12 @@ import org.parabot.environment.servers.ServerManifest;
 import org.parabot.environment.servers.executers.LocalPublicServerExecuter;
 import org.parabot.environment.servers.executers.LocalServerExecuter;
 import org.parabot.environment.servers.loader.ServerLoader;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.lang.reflect.Constructor;
+import java.util.ArrayList;
 
 /**
  * Parses local server providers located in the servers directory

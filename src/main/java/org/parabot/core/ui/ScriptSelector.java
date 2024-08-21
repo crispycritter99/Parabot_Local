@@ -5,7 +5,6 @@ import org.parabot.core.Context;
 import org.parabot.core.Directories;
 import org.parabot.core.desc.ScriptDescription;
 import org.parabot.core.parsers.scripts.ScriptParser;
-import org.parabot.environment.api.utils.WebUtil;
 import org.parabot.environment.scripts.Category;
 
 import javax.swing.*;
@@ -19,10 +18,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
 import java.net.URI;
-import java.net.URLEncoder;
 import java.util.HashMap;
 
 /**

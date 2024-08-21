@@ -5,7 +5,6 @@ import org.parabot.core.asm.interfaces.Injectable;
 import org.parabot.core.asm.wrappers.*;
 import org.parabot.core.forum.AccountManager;
 import org.parabot.core.forum.AccountManagerAccess;
-import org.parabot.environment.api.utils.PBPreferences;
 
 import java.util.ArrayList;
 import java.util.Collections;

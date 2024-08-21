@@ -1,18 +1,7 @@
 package org.parabot.core.parsers.servers;
 
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.parabot.core.Configuration;
-import org.parabot.core.desc.ServerDescription;
 import org.parabot.core.forum.AccountManager;
 import org.parabot.core.forum.AccountManagerAccess;
-import org.parabot.core.ui.utils.UILog;
-import org.parabot.environment.api.utils.WebUtil;
-import org.parabot.environment.servers.executers.PublicServerExecuter;
-
-import javax.swing.*;
-import java.io.BufferedReader;
-import java.net.URL;
 
 /**
  * Parses servers hosted on Parabot
@@ -34,7 +23,7 @@ public class PublicServers extends ServerParser {
 
     @Override
     public void execute() {
-        try {
+        /*try {
             BufferedReader br = WebUtil.getReader(new URL(
                     Configuration.GET_SERVER_PROVIDERS), manager.getAccount().getURLUsername(), manager.getAccount().getURLPassword());
             String line;
@@ -57,6 +46,6 @@ public class PublicServers extends ServerParser {
         } catch (Exception e) {
             UILog.log("Error", "Failed to load public servers. Either disable your anti-virus or request support on the forums.", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
-        }
+        }*/
     }
 }
