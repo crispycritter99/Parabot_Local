@@ -14,9 +14,9 @@ Once you find the hooks and put them in an .xml, you can add the server to your 
     "version": "<doesn't matter>",
     "client-class": "<whatever the classname for your Client interface was in your hooks, for example, 'Game'",
     "locations": {
-        "provider": "https://2006scape.org/Downloads/bot/Provider.jar",
-        "server": "<website link to the .jar download for the server",
-        "hooks": "<link to your hooks.xml, preferably in a github like https://raw.githubusercontent.com/<your github username>/<repository>/main/hooks.xml ",
+        "provider": "/path/to/the/provider_jar.jar",   (Provider.jar is provided in this repo)
+        "server": "/path/to/the/server_jar.jar",
+        "hooks": "<link to your hooks.xml>",
     }
 }
 ```
@@ -28,14 +28,16 @@ example: 2006scape.json
     "version": 1.0,
     "client-class": "Game",
     "locations":{
-        "provider": "https://2006scape.org/Downloads/bot/Provider.jar",
-        "server": "https://2006scape.org/Downloads/client.jar",
-        "hooks": "https://raw.githubusercontent.com/crispycritter99/stuff/main/2006Scape_hooks.xml"
+        "provider": "C:\Users\Daniel\Documents\Parabot\Provider\Provider.jar",
+        "server": "C:\Users\Daniel\Documents\Parabot\serverjars\PkHonor.jar",
+        "hooks": "https://bdn.parabot.org/data/hooks/carmeuses/2006rebotted_hooks.xml"
     }
 }
 ```
 
 I do not know Java. What I made has worked for me, but if it doesn't work for you, I probably won't be able to help you. 
+
+TODO: How to make parabot load in a local .xml file instead of requiring a url
 # Parabot
 
 Parabot V2.8.1
