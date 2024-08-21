@@ -28,8 +28,8 @@ example: 2006scape.json
     "version": 1.0,
     "client-class": "Game",
     "locations":{
-        "provider": "C:\Users\Daniel\Documents\Parabot\Provider\Provider.jar",
-        "server": "C:\Users\Daniel\Documents\Parabot\serverjars\PkHonor.jar",
+        "provider": "C:\Users\crispycritter99\Documents\Parabot\Provider\Provider.jar",
+        "server": "C:\Users\crispycritter99\Documents\Parabot\serverjars\PkHonor.jar",
         "hooks": "https://bdn.parabot.org/data/hooks/carmeuses/2006rebotted_hooks.xml"
     }
 }
