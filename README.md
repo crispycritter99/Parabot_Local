@@ -1,11 +1,13 @@
 [![Stories in Ready](https://badge.waffle.io/Parabot/Parabot.png?label=ready&title=Ready)](https://waffle.io/Parabot/Parabot)
 [![Build Status](https://travis-ci.org/Parabot/Parabot.svg?branch=master)](https://travis-ci.org/Parabot/Parabot)
 
-8/21/2024:
+# 8/21/2024:
 This fork has the internal API and the launcher, so they don't need to be grabbed from maven the way the original was designed. This fork also doesn't rely on the parabot website, which means no logging in or automatically pulling a list of public servers. 
+
 If you want to use this parabot, you will have to find the hooks for your own servers. Here's a tutorial https://parabot.atlassian.net/wiki/spaces/TUTORIALS/pages/2981896/How+to+hook+a+server. 
+
 Once you find the hooks and put them in an .xml, you can add the server to your parabot server folder at documents/parabot/servers/ by making a <servername>.json with the following format:
-#########
+```
 {
     "name": "<server name>",
     "author": "<doesn't matter>",
@@ -17,8 +19,9 @@ Once you find the hooks and put them in an .xml, you can add the server to your 
         "hooks": "<link to your hooks.xml, preferably in a github like https://raw.githubusercontent.com/<your github username>/<repository>/main/hooks.xml ",
     }
 }
-#########
+```
 example: 2006scape.json
+```
 {
     "name": "2006scape",
     "author": "RedSparr0w",
@@ -30,7 +33,7 @@ example: 2006scape.json
         "hooks": "https://raw.githubusercontent.com/crispycritter99/stuff/main/2006Scape_hooks.xml"
     }
 }
-##########
+```
 
 I do not know Java. What I made has worked for me, but if it doesn't work for you, I probably won't be able to help you. 
 # Parabot
